@@ -1,50 +1,64 @@
-* {
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+	</head>
+
+	<style>
+		* {
 	padding: 20px;
 	margin: 0px;
 }
-
-.flex,
-.flex > div {
-	box-sizing: border-box;
-}
-
-.flex {
-	border: 1px solid gray;
+.box {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.flex > div {
+.box > div {
 	width: 150px;
 	border: 1px solid #f00;
 	padding: 0;
 	margin-bottom: 10px;
 }
 
-.flex_item1 {
+.box_item1 {
 	height: 120px;
 }
 
-.flex_item2 {
+.box_item2 {
 	height: 100px;
 }
 
-.flex_item3 {
+.box_item3 {
 	height: 40px;
 }
 
-.flex_item4 {
+.box_item4 {
 	height: 200px;
 	border: 1px solid blue!important;
 }
 
 @media all and (max-width: 640px) {
-	.flex_item4 {
+	.box_item4 {
 		order: -1;
 	}
-	.flex {
+	.box {
 		flex-wrap: wrap;
 		align-items: flex-start;
 	}
 }
+	</style>
+
+	<body>
+		<div class="box">
+			<div class="box_item1">120px</div>
+			<div class="box_item2">100px</div>
+			<div class="box_item3">40px</div>
+			<div class="box_item4">200px</div>
+		</div>
+	</body>
+
+</html>
